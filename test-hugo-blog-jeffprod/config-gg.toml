@@ -7,13 +7,14 @@
 # Title of the main page of the Gopher hole and/or Gemini capsule
 title = "My New Gopher/Gemini Site"
 
-theme = "Gopher-Gemini"
+theme = "Hugo-2-Gopher-and-Gemini"
 languageCode = "en-us"
 defaultcontentlanguage = "en-us"
+ignoreFiles =  [".html$"] # ignore content written in html files
 
 [params]
     # Author and copyright can be placed at the bottom of selected pages
-    author = "My Name"
+    author = "Test Name"
     copyright = "copyright 2021"
 
     # Information about the site. Placed after the description (below).
