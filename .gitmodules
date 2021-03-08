@@ -1,0 +1,9 @@
+[submodule "test-hugo-theme-console/themes/hugo-theme-console"]
+	path = test-hugo-theme-console/themes/hugo-theme-console
+	url = https://github.com/mrmierzejewski/hugo-theme-console.git
+[submodule "test-hugo-researcher/themes/researcher"]
+	path = test-hugo-researcher/themes/researcher
+	url = https://github.com/ojroques/hugo-researcher.git
+[submodule "test-hugo-blog-jeffprod/themes/jeffprod"]
+	path = test-hugo-blog-jeffprod/themes/jeffprod
+	url = https://github.com/Tazeg/hugo-blog-jeffprod.git
