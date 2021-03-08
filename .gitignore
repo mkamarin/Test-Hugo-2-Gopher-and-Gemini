@@ -2,5 +2,6 @@
 *.swp
 *.swo
 TAGS
-/public/
+public/
+/logs/*
 
