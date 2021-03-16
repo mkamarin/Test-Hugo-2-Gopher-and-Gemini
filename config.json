@@ -1,0 +1,13 @@
+{"site_urls": [ "gopher://pi-server", "gemini://pi-server" ], "paths": [
+"/home/mmarin/src/git-repos/tmp/toybox/",
+"/home/mmarin/src/git-repos/tmp/toybox-gemini",
+"/home/mmarin/src/git-repos/Gopher-and-Gemini-Walker/test/toyhole",
+"/home/mmarin/src/git-repos/Gopher-and-Gemini-Walker/test/toycapsule",
+"/home/mmarin/tmp/IBM-Personal/2011/CSU-DH/Spring - Teaching CSU-DH CTC-362/Course/Gopher/Course",
+"/home/mmarin/src/git-repos/Test-Hugo-2-Gopher-and-Gemini/test-hugo-blog-jeffprod/public-gg/gopher",
+"/home/mmarin/src/git-repos/Test-Hugo-2-Gopher-and-Gemini/test-hugo-blog-jeffprod/public-gg/gemini",
+"/home/mmarin/src/git-repos/Test-Hugo-2-Gopher-and-Gemini/test-hugo-researcher/public-gg/gopher",
+"/home/mmarin/src/git-repos/Test-Hugo-2-Gopher-and-Gemini/test-hugo-researcher/public-gg/gemini",
+"/home/mmarin/src/git-repos/Test-Hugo-2-Gopher-and-Gemini/test-hugo-theme-console/public-gg/gopher",
+"/home/mmarin/src/git-repos/Test-Hugo-2-Gopher-and-Gemini/test-hugo-theme-console/public-gg/gemini",
+ "" ]}

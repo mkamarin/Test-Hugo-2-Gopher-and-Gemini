@@ -14,6 +14,7 @@ if [ "$2" = "clean" ]; then
     exit
 fi
 
+config="$1"
 echo "Working in: $(pwd)"
 
 mv -f public-gg public-gg-sav
@@ -23,4 +24,6 @@ hugo
 echo
 
 themes/${hugo2ggtheme}/src/hugo2gg.py
+echo "\"$(pwd)/public-gg/gopher\"," >> "${config}"
+echo "\"$(pwd)/public-gg/gemini\"," >> "${config}"
 

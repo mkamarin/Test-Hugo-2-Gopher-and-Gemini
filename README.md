@@ -1,7 +1,7 @@
 # Test-Hugo-2-Gopher-and-Gemini
 Testbed for the [Hugo-2-Gopher-and-Gemini](https://github.com/mkamarin/Hugo-2-Gopher-and-Gemini) repository. The test  consist of few hugo theme's examples that will be modified to test the `Hugo-2-Gopher-and-Gemini` project.
 
-This is a companion repository to the [Hugo-2-Gopher-and-Gemini](https://github.com/mkamarin/Hugo-2-Gopher-and-Gemini) with the purpose of testing it.
+This is a companion repository to the [Hugo-2-Gopher-and-Gemini](https://github.com/mkamarin/Hugo-2-Gopher-and-Gemini) repository for testing purposes. The other companion repository is the [Gopher-and-Gemini-Walker](https://github.com/mkamarin/Gopher-and-Gemini-Walker) used to navigate generated sites before deploying them.
 
 ## Introduction
 The tests will consist of examples from hugo themes. Each one will be named **test-**<theme name>. Each test will be enhanced to test parts of the `hugo2gg.py` program capabilities.
