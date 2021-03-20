@@ -97,7 +97,11 @@ do
     fi
 
     pushd "${folder}" >/dev/null
-    ./test.sh "${config}"     2>&1 | tee -a "${log}"
+    ./test.sh "${config}"       2>&1 | tee -a "${log}"
+    if [ $? -ne 0 ]; then
+        echo "Exit with errors" 2>&1 | tee -a "${log}"
+        exit $?
+    fi
     popd >/dev/null
 
     echo                        2>&1 | tee -a "${log}" 

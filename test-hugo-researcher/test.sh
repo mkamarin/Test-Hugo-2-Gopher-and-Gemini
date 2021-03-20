@@ -21,9 +21,17 @@ mv -f public-gg public-gg-sav
 
 echo "Executing hugo base line"
 hugo
+if [ $? -ne 0 ]; then
+    echo "Exit with errors"
+    exit $?
+fi
 echo
 
 themes/${hugo2ggtheme}/src/hugo2gg.py
+if [ $? -ne 0 ]; then
+    echo "Exit with errors"
+    exit $?
+fi
 echo "\"$(pwd)/public-gg/gopher\"," >> "${config}"
 echo "\"$(pwd)/public-gg/gemini\"," >> "${config}"
 
