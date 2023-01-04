@@ -13,6 +13,9 @@ if [ "$2" = "clean" ]; then
     rm -f -r -d  public-gg-sav
     rm -f        .hugo_build.lock
 
+    mkdir  public
+    mkdir  public-gg
+
     exit
 fi
 
@@ -22,16 +25,17 @@ echo "Working in: $(pwd)"
 mv -f public-gg public-gg-sav
 
 echo "Executing hugo base line"
+pwd
 hugo
 if [ $? -ne 0 ]; then
-    echo "Exit with errors"
+    echo "Hugo exited with errors"
     exit $?
 fi
 echo
 
-themes/${hugo2ggtheme}/src/hugo2gg.py
+themes/${hugo2ggtheme}/src/hugo2gg.py --type all
 if [ $? -ne 0 ]; then
-    echo "Exit with errors"
+    echo "Hugo2gg exited with errors"
     exit $?
 fi
 
