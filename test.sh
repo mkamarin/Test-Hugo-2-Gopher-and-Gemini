@@ -58,6 +58,7 @@ do
             ;;
         --help|-h)
             arguments
+            exit 0
             ;;
         *)
             break
@@ -66,6 +67,8 @@ do
 done
 
 ## Execute the tests
+echo "..."                      2>&1 | tee    "${log}" 
+echo "-------------"            2>&1 | tee    "${log}" 
 echo "Start $(date)"            2>&1 | tee    "${log}" 
 echo "Starting in: $(pwd)"      2>&1 | tee -a "${log}" 
 echo "Log in   : ${log}"        2>&1 | tee -a "${log}" 

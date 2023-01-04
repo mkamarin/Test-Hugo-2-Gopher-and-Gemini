@@ -10,6 +10,8 @@ if [ "$2" = "clean" ]; then
 
     rm -f -r -d  public
     rm -f -r -d  public-gg
+    rm -f -r -d  public-gg-sav
+    rm -f        .hugo_build.lock
 
     exit
 fi
@@ -32,6 +34,7 @@ if [ $? -ne 0 ]; then
     echo "Exit with errors"
     exit $?
 fi
+
 echo "\"$(pwd)/public-gg/gopher\"," >> "${config}"
 echo "\"$(pwd)/public-gg/gemini\"," >> "${config}"
 
