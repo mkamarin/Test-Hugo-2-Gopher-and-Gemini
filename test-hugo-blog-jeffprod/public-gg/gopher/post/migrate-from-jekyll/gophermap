@@ -1,0 +1,224 @@
+Migrate to Hugo from Jekyll
+
+March 2014 · 4 minute read
+
+
+Move static content to `static`
+
+Jekyll  has a rule that  any directory  not starting  with ``  will be
+copied  as-is  to  the`site`output.  Hugo  keeps  all  static  content
+under`static`  You  should  therefore move it all there. With  Jekyll,
+something that looked like
+
+i    ▾ <root>/	/
+i        ▾ images/	/
+i            logo.png	/
+
+should become
+
+i    ▾ <root>/	/
+i        ▾ static/	/
+i            ▾ images/	/
+i                logo.png	/
+
+Additionally, you'll  want any files  that should  reside  at the root
+(such as`CNAME` to be moved to`static`
+
+Create your Hugo configuration file
+
+Hugo can read your  configuration as JSON, YAML or TOML. Hugo supports
+parameters custom configuration  too. Refer  to the Hugo configuration
+documentation [1] for details.
+
+Set your configuration publish folder to `_site`
+
+The default is for Jekyll to publish to`site`and for  Hugo  to publish
+to`public` If,  like me, you  have`site`mapped  to  a git submodule on
+the`gh-pages`branch [2], you'll want to do one of two alternatives:
+
+1. Change  your submodule to  point  to  map`gh-pages`to  public  instead
+   of`_site`(recommended).
+
+i        git submodule deinit _site	/
+i        git rm _site	/
+i        git submodule add -b gh-pages git@github.com:your-username/your-repo.git public	/
+
+2. Or, change the Hugo configuration to use`_site`instead of`public`
+
+i        {	/
+i            ..	/
+i            "publishdir": "_site",	/
+i            ..	/
+i        }	/
+
+Convert Jekyll templates to Hugo templates
+
+That's the bulk of the  work  right  here.  The  documentation is your
+friend. You should refer to Jekyll's template documentation [3] if you
+need  to refresh your  memory on how you built  your  blog  and Hugo's
+template [4] to learn Hugo's way.
+
+As  a  single  reference  data  point,  converting  my  templates  for
+heyitsalex.net [5] took me no more than a few hours.
+
+Convert Jekyll plugins to Hugo shortcodes
+
+Jekyll has plugins [6];  Hugo has shortcodes [7]. It's fairly  trivial
+to do a port.
+
+Implementation
+
+As an example,  I was using  a custom`image_tag`[8] plugin to generate
+figures with caption when running Jekyll. As I  read about shortcodes,
+I found Hugo  had a nice built-in shortcode that does exactly the same
+thing.
+
+Jekyll's plugin:
+
+i    module Jekyll	/
+i      class ImageTag < Liquid::Tag	/
+i        @url = nil	/
+i        @caption = nil	/
+i        @class = nil	/
+i        @link = nil	/
+i        // Patterns	/
+i        IMAGE_URL_WITH_CLASS_AND_CAPTION =	/
+i        IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)"(.*?)"(\s+)->((https?:\/\/|\/)(\S+))(\s*)/i	/
+i        IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)"(.*?)"/i	/
+i        IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i	/
+i        IMAGE_URL = /((https?:\/\/|\/)(\S+))/i	/
+i        def initialize(tag_name, markup, tokens)	/
+i          super	/
+i          if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK	/
+i            @class   = $1	/
+i            @url     = $3	/
+i            @caption = $7	/
+i            @link = $9	/
+i          elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION	/
+i            @class   = $1	/
+i            @url     = $3	/
+i            @caption = $7	/
+i          elsif markup =~ IMAGE_URL_WITH_CAPTION	/
+i            @url     = $1	/
+i            @caption = $5	/
+i          elsif markup =~ IMAGE_URL_WITH_CLASS	/
+i            @class = $1	/
+i            @url   = $3	/
+i          elsif markup =~ IMAGE_URL	/
+i            @url = $1	/
+i          end	/
+i        end	/
+i        def render(context)	/
+i          if @class	/
+i            source = "<figure class='#{@class}'>"	/
+i          else	/
+i            source = "<figure>"	/
+i          end	/
+i          if @link	/
+i            source += "<a href=\"#{@link}\">"	/
+i          end	/
+i          source += "<img src=\"#{@url}\">"	/
+i          if @link	/
+i            source += "</a>"	/
+i          end	/
+i          source += "<figcaption>#{@caption}</figcaption>" if @caption	/
+i          source += "</figure>"	/
+i          source	/
+i        end	/
+i      end	/
+i    end	/
+i    Liquid::Template.register_tag('image', Jekyll::ImageTag)	/
+
+is written as this Hugo shortcode:
+
+i    <!-- image -->	/
+i    <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>	/
+i        {{ with .Get "link"}}<a href="{{.}}">{{ end }}	/
+i            <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />	/
+i        {{ if .Get "link"}}</a>{{ end }}	/
+i        {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}	/
+i        <figcaption>{{ if isset .Params "title" }}	/
+i            {{ .Get "title" }}{{ end }}	/
+i            {{ if or (.Get "caption") (.Get "attr")}}<p>	/
+i            {{ .Get "caption" }}	/
+i            {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}	/
+i                {{ .Get "attr" }}	/
+i            {{ if .Get "attrlink"}}</a> {{ end }}	/
+i            </p> {{ end }}	/
+i        </figcaption>	/
+i        {{ end }}	/
+i    </figure>	/
+i    <!-- image -->	/
+
+Usage
+
+I simply changed:
+
+i    {% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg "One of my favorite touristy-type photos. I secretly waited for the good light while we were "having fun" and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing." ->http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}	/
+
+to  this (this  example uses  a slightly  extended version  named`fig`
+different than the built-in`figure`:
+
+i    {{%/* fig class="full" src="http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg" title="One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing." link="http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/" */%}}	/
+
+As  a  bonus,  the  shortcode  named parameters  are,  arguably,  more
+readable.
+
+Finishing touches
+
+Fix content
+
+Depending on the amount of customization that was done  with each post
+with Jekyll, this step will require more  or less effort. There are no
+hard  and  fast rules  here  except  that`hugo server --watch`is  your
+friend. Test your changes and fix errors as needed.
+
+Clean up
+
+You'll want to remove  the Jekyll configuration at  this point. If you
+have anything else that isn't used, delete it.
+
+A practical example in a diff
+
+Hey,  it's Alex [9] was migrated in less  than a father-with-kids  day
+from Jekyll to Hugo.  You can see  all the  changes (and screw-ups) by
+looking at this diff [10].
+
+
+References:
+1  [1] Hugo configuration documentation	/overview/configuration/
+h  [2] `_site` mapped to a git submodule on the `gh-pages` branch	URL:http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html
+h  [3] Jekyll's template documentation	URL:http://jekyllrb.com/docs/templates/
+1  [4] Hugo's template	/layout/templates/
+h  [5] heyitsalex.net	URL:http://heyitsalex.net/
+h  [6] plugins	URL:http://jekyllrb.com/docs/plugins/
+1  [7] shortcodes	/doc/shortcodes/
+h  [8] `image_tag`	URL:https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb
+h  [9] Hey, it's Alex	URL:http://heyitsalex.net/
+h  [10] diff	URL:https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610
+Site sections:
+1Home	/
+1Posts	/posts/
+1About	/about/
+1(Hu)go Template Primer	/gopher/post/goisforlovers
+1About Hugo	/gopher/about
+1Getting Started with Hugo	/gopher/post/hugoisforlovers
+1tutorials	
+
+1categories:	/categories
+1development	/categories/development/
+1golang	/categories/golang/
+1tags:	/tags
+1development	/tags/development/
+1go	/tags/go/
+1golang	/tags/golang/
+1hugo	/tags/hugo/
+1templates	/tags/templates/
+1themes	/tags/themes/
+Social media links:
+hGithub	URL:https://github.com/my-account/
+hMail	URL:mailto:my-name@example.org
+
+1Return to main page	/
+
+ Test Name copyright 2021

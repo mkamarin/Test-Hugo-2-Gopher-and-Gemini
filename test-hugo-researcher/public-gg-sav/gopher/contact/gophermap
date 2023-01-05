@@ -1,0 +1,45 @@
+Contact
+
+January 0001 · 1 minute read
+
+
+* Email: foo@xyz.com [1]
+* Phone: +91-123123 [2]
+
+---
+
+Mailing Address
+
+
+    221B, Baker Street  London  United Kingdom
+
+---
+
+Social
+
+
+1. Facebook [3]
+2. Twitter [4]
+3. Google+ [5]
+
+
+References:
+h  [1] foo@xyz.com	URL:mailto:foo@xyz.com
+h  [2] +91-123123	URL:tel:+91-123123
+h  [3] Facebook	URL:#
+h  [4] Twitter	URL:#
+h  [5] Google+	URL:#
+Site sections:
+1Home	/
+1Posts	/posts/
+1About	/about/
+
+1categories:	/categories
+1tags:	/tags
+Social media links:
+hGithub	URL:https://github.com/my-account/
+hMail	URL:mailto:my-name@example.org
+
+1Return to main page	/
+
+ Test Name copyright 2021

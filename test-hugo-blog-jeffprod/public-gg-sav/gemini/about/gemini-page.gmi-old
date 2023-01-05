@@ -1,0 +1,66 @@
+
+[[[=> page:page,copyPage:<no value>,keepRaw:<no value>,removeExtras:<no value>,ignoreLinks:<no value><=]]]
+
+# About Hugo
+
+
+Hugo is the **world’s fastest framework for building websites**. It is written in Go.
+
+It makes use of a variety of open source projects including:
+
+* https://github.com/russross/blackfriday
+* https://github.com/alecthomas/chroma
+* https://github.com/muesli/smartcrop
+* https://github.com/spf13/cobra
+* https://github.com/spf13/viper
+
+Learn more and contribute on [GitHub](https://github.com/gohugoio).
+
+
+
+[[[=> references <=]]]
+
+
+
+## Site sections
+=> /index.gmi  Home
+=> /posts/.gmi  Posts
+=> /about/.gmi  About
+=> /gemini/post/goisforlovers/gemini-page.gmi.gmi  (Hu)go Template Primer
+=> /gemini/about/gemini-page.gmi.gmi  About Hugo
+=> /gemini/post/hugoisforlovers/gemini-page.gmi.gmi  Getting Started with Hugo
+=> .gmi  tutorials
+
+
+=> /categories.gmi  categories:
+=> /categories/development.gmi   development
+=> /categories/golang.gmi   golang
+
+=> /tags.gmi  tags:
+=> /tags/development.gmi   development
+=> /tags/go.gmi   go
+=> /tags/golang.gmi   golang
+=> /tags/hugo.gmi   hugo
+=> /tags/templates.gmi   templates
+=> /tags/themes.gmi   themes
+
+
+
+
+
+
+## Social media links
+=> https://github.com/my-account/  Github
+=> mailto:my-name@example.org  Mail
+
+
+
+=> /index.gmi  Return to main page
+
+
+
+ Test Name 
+copyright 2021
+
+
+

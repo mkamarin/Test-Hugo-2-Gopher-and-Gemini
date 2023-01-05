@@ -1,0 +1,42 @@
+
+# About
+
+
+This is the about page.
+
+
+
+
+
+
+## Site sections
+=> /index.gmi  Home
+=> /posts/.gmi  Posts
+=> /about/.gmi  About
+
+
+=> /categories.gmi  categories:
+=> /categories/tools.gmi   tools
+
+=> /tags.gmi  tags:
+=> /tags/test.gmi   test
+
+
+
+
+
+
+## Social media links
+=> https://github.com/my-account/  Github
+=> mailto:my-name@example.org  Mail
+
+
+
+=> /index.gmi  Return to main page
+
+
+
+My Name copyright 2021
+
+
+

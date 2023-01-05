@@ -1,0 +1,44 @@
+
+# Hel, Poland
+
+
+Hel Peninsula [1] (Polish: Mierzeja Helska) is a 35-km-long sand bar peninsula in northern Poland separating the Bay of Puck from the open Baltic Sea. The width of the peninsula varies from approximately 300 m near Jurata, through 100 m in the most narrow part to over 3 km at the tip. Since the peninsula was formed entirely of sand, it is frequently turned into an island by winter storms. Until the 17th century the peninsula was a chain of islands that formed a strip of land only during the summer.
+=> hel-poland-2.jpg   Hel Peninsula
+
+
+
+References:
+=> https://en.wikipedia.org/w/index.php?title=Hel_Peninsula&oldid=939640541  [1] Hel Peninsula
+
+
+
+
+## Site sections
+=> /index.gmi  Home
+=> /posts/.gmi  Posts
+=> /about/.gmi  About
+
+
+=> /categories.gmi  categories:
+
+=> /tags.gmi  tags:
+
+
+
+
+
+
+## Social media links
+=> https://github.com/my-account/  Github
+=> mailto:my-name@example.org  Mail
+
+
+
+=> /index.gmi  Return to main page
+
+
+
+Test Name copyright 2021
+
+
+
