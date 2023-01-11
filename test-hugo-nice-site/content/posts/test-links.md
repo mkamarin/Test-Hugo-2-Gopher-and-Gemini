@@ -47,7 +47,7 @@ This is a URL:
 
 This is a HTML tag `<a href="uri">label</a>`:
 
-<a href="http://www.examp[le.com">my example</a>
+<a href="http://yywww.example.com">my example</a>
 
 The following are [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/).  
 Not all the shortcuts are supported. The supported subset is as follows:
