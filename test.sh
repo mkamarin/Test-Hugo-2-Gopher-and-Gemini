@@ -26,6 +26,12 @@ function clean_up ()
     exit
 }
 
+function do_diff ()
+{
+    echo "diff this directory against ../../hugo-tests/Saved-for-comparison/Test-Hugo-2-Gopher-and-Gemini"
+    diff -qbr --no-dereference . ../../hugo-tests/Saved-for-comparison/Test-Hugo-2-Gopher-and-Gemini | grep --invert-match "\.\/\.git\/\|\/logs:\|-gg-sav:"
+}
+
 function arguments ()
 {
     echo "Usage: $0 [[flags] [<paths>]"
@@ -35,6 +41,7 @@ function arguments ()
     echo "                       this name (default logs/config.json)"
     echo " -s, --site   <name>   A host site name (site url)"
     echo " -h, --help            print this message"
+    echo " -d, --diff            diff against "
     echo " [<path>  ... <path>]  Paths containing Gopher or Gemini sites"
     echo
     echo " This script generates a json configuration file to be used with"
@@ -55,6 +62,10 @@ do
         --site|-s)
             shift
             host="$1"
+            ;;
+        --diff|-d)
+            do_diff
+            exit 0
             ;;
         --help|-h)
             arguments
