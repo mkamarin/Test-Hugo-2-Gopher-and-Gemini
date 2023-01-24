@@ -32,8 +32,11 @@ if [ $? -ne 0 ]; then
     exit $?
 fi
 echo
-
-themes/${hugo2ggtheme}/src/hugo2gg.py --type all --keep
+echo "###############"
+echo "$@"
+echo "$2"
+echo "###############"
+themes/${hugo2ggtheme}/src/hugo2gg.py --type all "$2"
 if [ $? -ne 0 ]; then
     echo "Hugo2gg exited with errors"
     exit $?

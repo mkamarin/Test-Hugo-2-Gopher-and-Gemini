@@ -1,0 +1,190 @@
+content/post/creating-a-new-theme.md:    parent: tutorials
+content/post/creating-a-new-theme.md:next: /tutorials/github-pages-blog
+content/post/creating-a-new-theme.md:prev: /tutorials/automated-deployments
+content/post/migrate-from-jekyll.md:    parent: tutorials
+content/post/migrate-from-jekyll.md:prev: /tutorials/mathjax
+public-gg/categories/development/gopher/gophermap.txt:1tutorials	
+public-gg/categories/development/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/categories/gopher/gophermap.txt:1tutorials	
+public-gg/categories/golang/gopher/gophermap.txt:1tutorials	
+public-gg/categories/golang/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/categories/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/gopher/categories/development/gophermap:1tutorials	
+public-gg/gopher/categories/development/gophermap.txt:1tutorials	
+public-gg/gopher/categories/golang/gophermap:1tutorials	
+public-gg/gopher/categories/golang/gophermap.txt:1tutorials	
+public-gg/gopher/categories/gophermap:1tutorials	
+public-gg/gopher/categories/gophermap.txt:1tutorials	
+public-gg/gopher/about/gophermap:1tutorials	
+public-gg/gopher/about/gophermap.txt:1tutorials	
+public-gg/gopher/gophermap:1tutorials	
+public-gg/gopher/tags/development/gophermap:1tutorials	
+public-gg/gopher/tags/development/gophermap.txt:1tutorials	
+public-gg/gopher/tags/golang/gophermap:1tutorials	
+public-gg/gopher/tags/golang/gophermap.txt:1tutorials	
+public-gg/gopher/tags/gophermap:1tutorials	
+public-gg/gopher/tags/go/gophermap:1tutorials	
+public-gg/gopher/tags/go/gophermap.txt:1tutorials	
+public-gg/gopher/tags/themes/gophermap:1tutorials	
+public-gg/gopher/tags/themes/gophermap.txt:1tutorials	
+public-gg/gopher/tags/templates/gophermap:1tutorials	
+public-gg/gopher/tags/templates/gophermap.txt:1tutorials	
+public-gg/gopher/tags/hugo/gophermap:1tutorials	
+public-gg/gopher/tags/hugo/gophermap.txt:1tutorials	
+public-gg/gopher/tags/gophermap.txt:1tutorials	
+public-gg/gopher/post/gophermap:1tutorials	
+public-gg/gopher/post/creating-a-new-theme/gophermap:1tutorials	
+public-gg/gopher/post/creating-a-new-theme/gophermap.txt:1tutorials	
+public-gg/gopher/post/migrate-from-jekyll/gophermap:1tutorials	
+public-gg/gopher/post/migrate-from-jekyll/gophermap.txt:1tutorials	
+public-gg/gopher/post/goisforlovers/gophermap:1tutorials	
+public-gg/gopher/post/goisforlovers/gophermap.txt:1tutorials	
+public-gg/gopher/post/hugoisforlovers/gophermap:1tutorials	
+public-gg/gopher/post/hugoisforlovers/gophermap.txt:1tutorials	
+public-gg/gopher/post/gophermap.txt:1tutorials	
+public-gg/gopher/gophermap.txt:1tutorials	
+public-gg/gemini/tags.gmi:=> .gmi  tutorials
+public-gg/gemini/categories/development/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/categories/development.gmi:=> .gmi  tutorials
+public-gg/gemini/categories/golang/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/categories/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/categories/golang.gmi:=> .gmi  tutorials
+public-gg/gemini/about/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/about.gmi:=> .gmi  tutorials
+public-gg/gemini/index.gmi:=> .gmi  tutorials
+public-gg/gemini/tags/themes.gmi:=> .gmi  tutorials
+public-gg/gemini/tags/development/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/tags/development.gmi:=> .gmi  tutorials
+public-gg/gemini/tags/templates.gmi:=> .gmi  tutorials
+public-gg/gemini/tags/golang/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/tags/hugo.gmi:=> .gmi  tutorials
+public-gg/gemini/tags/go/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/tags/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/tags/go.gmi:=> .gmi  tutorials
+public-gg/gemini/tags/themes/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/tags/templates/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/tags/hugo/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/tags/golang.gmi:=> .gmi  tutorials
+public-gg/gemini/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/categories.gmi:=> .gmi  tutorials
+public-gg/gemini/post.gmi:=> .gmi  tutorials
+public-gg/gemini/post/creating-a-new-theme.gmi:=> .gmi  tutorials
+public-gg/gemini/post/creating-a-new-theme/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/post/migrate-from-jekyll/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/post/goisforlovers/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/post/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/post/migrate-from-jekyll.gmi:=> .gmi  tutorials
+public-gg/gemini/post/hugoisforlovers/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg/gemini/post/hugoisforlovers.gmi:=> .gmi  tutorials
+public-gg/gemini/post/goisforlovers.gmi:=> .gmi  tutorials
+public-gg/tags/development/gopher/gophermap.txt:1tutorials	
+public-gg/tags/development/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/tags/gopher/gophermap.txt:1tutorials	
+public-gg/tags/golang/gopher/gophermap.txt:1tutorials	
+public-gg/tags/golang/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/tags/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/tags/go/gopher/gophermap.txt:1tutorials	
+public-gg/tags/go/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/tags/themes/gopher/gophermap.txt:1tutorials	
+public-gg/tags/themes/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/tags/templates/gopher/gophermap.txt:1tutorials	
+public-gg/tags/templates/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/tags/hugo/gopher/gophermap.txt:1tutorials	
+public-gg/tags/hugo/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg/post/gopher/gophermap.txt:1tutorials	
+public-gg/post/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/categories/development/gopher/gophermap.txt:1tutorials	
+public-gg-sav/categories/development/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/categories/gopher/gophermap.txt:1tutorials	
+public-gg-sav/categories/golang/gopher/gophermap.txt:1tutorials	
+public-gg-sav/categories/golang/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/categories/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/gopher/categories/development/gophermap:1tutorials	
+public-gg-sav/gopher/categories/development/gophermap.txt:1tutorials	
+public-gg-sav/gopher/categories/golang/gophermap:1tutorials	
+public-gg-sav/gopher/categories/golang/gophermap.txt:1tutorials	
+public-gg-sav/gopher/categories/gophermap:1tutorials	
+public-gg-sav/gopher/categories/gophermap.txt:1tutorials	
+public-gg-sav/gopher/about/gophermap:1tutorials	
+public-gg-sav/gopher/about/gophermap.txt:1tutorials	
+public-gg-sav/gopher/gophermap:1tutorials	
+public-gg-sav/gopher/tags/development/gophermap:1tutorials	
+public-gg-sav/gopher/tags/development/gophermap.txt:1tutorials	
+public-gg-sav/gopher/tags/golang/gophermap:1tutorials	
+public-gg-sav/gopher/tags/golang/gophermap.txt:1tutorials	
+public-gg-sav/gopher/tags/gophermap:1tutorials	
+public-gg-sav/gopher/tags/go/gophermap:1tutorials	
+public-gg-sav/gopher/tags/go/gophermap.txt:1tutorials	
+public-gg-sav/gopher/tags/themes/gophermap:1tutorials	
+public-gg-sav/gopher/tags/themes/gophermap.txt:1tutorials	
+public-gg-sav/gopher/tags/templates/gophermap:1tutorials	
+public-gg-sav/gopher/tags/templates/gophermap.txt:1tutorials	
+public-gg-sav/gopher/tags/hugo/gophermap:1tutorials	
+public-gg-sav/gopher/tags/hugo/gophermap.txt:1tutorials	
+public-gg-sav/gopher/tags/gophermap.txt:1tutorials	
+public-gg-sav/gopher/post/gophermap:1tutorials	
+public-gg-sav/gopher/post/creating-a-new-theme/gophermap:1tutorials	
+public-gg-sav/gopher/post/creating-a-new-theme/gophermap.txt:1tutorials	
+public-gg-sav/gopher/post/migrate-from-jekyll/gophermap:1tutorials	
+public-gg-sav/gopher/post/migrate-from-jekyll/gophermap.txt:1tutorials	
+public-gg-sav/gopher/post/goisforlovers/gophermap:1tutorials	
+public-gg-sav/gopher/post/goisforlovers/gophermap.txt:1tutorials	
+public-gg-sav/gopher/post/hugoisforlovers/gophermap:1tutorials	
+public-gg-sav/gopher/post/hugoisforlovers/gophermap.txt:1tutorials	
+public-gg-sav/gopher/post/gophermap.txt:1tutorials	
+public-gg-sav/gopher/gophermap.txt:1tutorials	
+public-gg-sav/gemini/tags.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/categories/development/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/categories/development.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/categories/golang/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/categories/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/categories/golang.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/about/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/about.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/index.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/tags/themes.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/tags/development/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/tags/development.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/tags/templates.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/tags/golang/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/tags/hugo.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/tags/go/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/tags/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/tags/go.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/tags/themes/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/tags/templates/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/tags/hugo/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/tags/golang.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/categories.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/post.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/post/creating-a-new-theme.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/post/creating-a-new-theme/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/post/migrate-from-jekyll/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/post/goisforlovers/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/post/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/post/migrate-from-jekyll.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/post/hugoisforlovers/gemini-page.gmi-old:=> .gmi  tutorials
+public-gg-sav/gemini/post/hugoisforlovers.gmi:=> .gmi  tutorials
+public-gg-sav/gemini/post/goisforlovers.gmi:=> .gmi  tutorials
+public-gg-sav/tags/development/gopher/gophermap.txt:1tutorials	
+public-gg-sav/tags/development/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/tags/gopher/gophermap.txt:1tutorials	
+public-gg-sav/tags/golang/gopher/gophermap.txt:1tutorials	
+public-gg-sav/tags/golang/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/tags/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/tags/go/gopher/gophermap.txt:1tutorials	
+public-gg-sav/tags/go/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/tags/themes/gopher/gophermap.txt:1tutorials	
+public-gg-sav/tags/themes/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/tags/templates/gopher/gophermap.txt:1tutorials	
+public-gg-sav/tags/templates/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/tags/hugo/gopher/gophermap.txt:1tutorials	
+public-gg-sav/tags/hugo/gemini/gemini-page.gmi:=> .gmi  tutorials
+public-gg-sav/post/gopher/gophermap.txt:1tutorials	
+public-gg-sav/post/gemini/gemini-page.gmi:=> .gmi  tutorials
+themes/jeffprod/exampleSite/content/post/creating-a-new-theme.md:    parent: tutorials
+themes/jeffprod/exampleSite/content/post/creating-a-new-theme.md:next: /tutorials/github-pages-blog
+themes/jeffprod/exampleSite/content/post/creating-a-new-theme.md:prev: /tutorials/automated-deployments
+themes/jeffprod/exampleSite/content/post/migrate-from-jekyll.md:    parent: tutorials
+themes/jeffprod/exampleSite/content/post/migrate-from-jekyll.md:prev: /tutorials/mathjax

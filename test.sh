@@ -2,12 +2,17 @@
 # Simple test of the Hugo 2 Gopher and Gemini project
 
 hugo2ggtheme=Hugo-2-Gopher-and-Gemini
+GopherandGeminiWalker=Gopher-and-Gemini-Walker
+
 path2hugo2ggtheme="$(pwd)/../${hugo2ggtheme}/"
+path2GopherandGeminiWalker="$(pwd)/../${GopherandGeminiWalker}/src/ggwalker.py"
 now=$(date +"%Y-%m-%d-(%H-%M-%S)")
 
 log="$(pwd)/logs/log-${now}.log"
 config="$(pwd)/logs/config.json"
 host=""
+walker="no"
+arguments=""
 
 ## Clean up code
 function clean_up ()
@@ -36,12 +41,14 @@ function arguments ()
 {
     echo "Usage: $0 [[flags] [<paths>]"
     echo
-    echo " -c, --clean           Cleans the test output data"
+    echo " -c, --clean              Cleans the test output data"
+    echo " -a, --arguments '<args>' Passes arguments down to hugo2gg"
     echo " -j, --json   <file>   Generates a configuration file with"
     echo "                       this name (default logs/config.json)"
     echo " -s, --site   <name>   A host site name (site url)"
     echo " -h, --help            print this message"
-    echo " -d, --diff            diff against "
+    echo " -d, --diff            diff against previusly copied data"
+    echo " -w, --walker          Execute ggwalker with config file"
     echo " [<path>  ... <path>]  Paths containing Gopher or Gemini sites"
     echo
     echo " This script generates a json configuration file to be used with"
@@ -59,6 +66,10 @@ do
             shift
             config="$1"
             ;;
+        --arguments|-a)
+            shift
+            arguments="$1"
+            ;;
         --site|-s)
             shift
             host="$1"
@@ -66,6 +77,9 @@ do
         --diff|-d)
             do_diff
             exit 0
+            ;;
+        --walker|-w)
+            walker="OK"
             ;;
         --help|-h)
             arguments
@@ -111,7 +125,7 @@ do
     fi
 
     pushd "${folder}" >/dev/null
-    ./test.sh "${config}"       2>&1 | tee -a "${log}"
+    ./test.sh "${config}" "${arguments}" 2>&1 | tee -a "${log}"
     if [ $? -ne 0 ]; then
         echo "Exit with errors" 2>&1 | tee -a "${log}"
         exit $?
@@ -124,6 +138,10 @@ done
 echo " \"\" ]}"  >> "${config}"
 echo "=================="       2>&1 | tee -a "${log}"
 echo                            2>&1 | tee -a "${log}" 
+
+if [ $walker == "OK" ]; then
+    ${path2GopherandGeminiWalker} offline --config ${config} 2>&1 | tee -a "${log}" 
+fi
 
 echo Done $(date)               2>&1 | tee -a "${log}" 
 
