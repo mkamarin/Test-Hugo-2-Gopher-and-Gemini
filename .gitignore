@@ -3,5 +3,6 @@
 *.swo
 TAGS
 public/
+public-gg/
 /logs/*
 

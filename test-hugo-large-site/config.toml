@@ -1,0 +1,9 @@
+##############################
+
+baseURL = "http://example.org/"
+#languageCode = "en-us"
+languageCode = "en"                       # content language
+title = "Large Hugo Site"
+theme = "mini"
+
+##############################
